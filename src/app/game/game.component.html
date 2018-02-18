@@ -1,0 +1,50 @@
+<div id="showgrid">
+  <div align="center">
+    <div *ngIf="(founded || noOneWins); else winner">
+      <div *ngIf="founded; else draw">
+        Congatulations!
+        <span [class]="getCssForPlayer(player)"></span> wins
+      </div>
+      <ng-template #draw>
+        Draw! No one wins
+      </ng-template>
+    </div>
+    <ng-template #winner>
+      Now is <span [class]="getCssForPlayer(player)"></span> turn
+    </ng-template>
+  </div>
+
+  <div class="row">
+    <div class="column" (click)="clickedOnField($event, 0, 0)" [ngClass]="{'winner': f(0,0),'nohover no_click': board[0][0] !== -1 || founded}">
+      <span [class]="draw_board_field(0, 0)"></span>
+    </div>
+    <div class="column" (click)="clickedOnField($event, 0, 1)" [ngClass]="{'winner': f(0,1),'nohover no_click': board[0][1] !== -1 || founded}">
+      <span [class]="draw_board_field(0, 1)"></span>
+    </div>
+    <div class="column" (click)="clickedOnField($event, 0, 2)" [ngClass]="{'winner': f(0,2),'nohover no_click': board[0][2] !== -1 || founded}">
+      <span [class]="draw_board_field(0, 2)"></span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column" (click)="clickedOnField($event, 1, 0)" [ngClass]="{'winner': f(1, 0),'nohover no_click': board[1][0] !== -1 || founded}">
+      <span [class]="draw_board_field(1, 0)"></span>
+    </div>
+    <div class="column" (click)="clickedOnField($event, 1, 1)" [ngClass]="{'winner': f(1, 1),'nohover no_click': board[1][1] !== -1 || founded}">
+      <span [class]="draw_board_field(1, 1)"></span>
+    </div>
+    <div class="column" (click)="clickedOnField($event, 1, 2)" [ngClass]="{'winner': f(1, 2),'nohover no_click': board[1][2] !== -1 || founded}">
+      <span [class]="draw_board_field(1, 2)"></span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column" (click)="clickedOnField($event, 2, 0)" [ngClass]="{'winner': f(2, 0),'nohover no_click': board[2][0] !== -1 || founded}">
+      <span [class]="draw_board_field(2, 0)"></span>
+    </div>
+    <div class="column" (click)="clickedOnField($event, 2, 1)" [ngClass]="{'winner': f(2, 1),'nohover no_click': board[2][1] !== -1 || founded}">
+      <span [class]="draw_board_field(2, 1)"></span>
+    </div>
+    <div class="column" (click)="clickedOnField($event, 2, 2)" [ngClass]="{'winner': f(2, 2),'nohover no_click': board[2][2] !== -1 || founded}">
+      <span [class]="draw_board_field(2, 2)"></span>
+    </div>
+  </div>
+</div>

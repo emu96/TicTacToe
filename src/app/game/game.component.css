@@ -1,0 +1,72 @@
+@media screen and (min-device-width:698px) {
+    div#showgrid {
+      width: 698px;
+      margin: auto;
+    }
+  }
+  
+  div.column {
+    border-style: solid;
+    border-width: 1px;
+    text-align: center;
+  }
+  
+  .row {
+    width: 100%;
+    margin: auto;
+  }
+  
+  @media (min-device-width: 698px) {
+    .column {
+      width: 230px;
+      height: 230px;
+      display: inline;
+      float: left;
+    }
+  }
+  
+  .column {
+    width: 230px;
+    height: 230px;
+    margin: 1px;
+    cursor: pointer;
+    background-color: #bbada0;
+  }
+
+  .exp {
+    font-size: 100px !important;
+    margin: 0 auto;
+    margin-top: 25%;
+  }
+
+  .fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .fa-close{
+    color: #776e65;
+    text-shadow: -3px 2px 0px rgba(255, 255, 255,1);
+  }
+
+  .fa-circle-o {
+    color: #776e65;
+    text-shadow: -3px 2px 0px rgba(255, 255, 255,1);
+}
+
+
+.column:not(.nohover):hover {  
+  background-color: #776e65;
+}
+
+.winner{
+  background-color: #eee4da;
+}
+
+.no_click{
+  pointer-events: none;
+}
+
